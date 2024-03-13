@@ -45,9 +45,9 @@ public class PersonController {
     }
 
     @PutMapping("/person/{id}")
-    public void updatePerson(@PathVariable Integer key, @RequestBody Person person) {
-        person.setId(key);
-        this.persons.put(key, person);
+    public void updatePerson(@PathVariable Integer id, @RequestBody Person person) {
+        person.setId(id);
+        this.persons.put(id, person);
     }
 
     @DeleteMapping("/person/{id}")
